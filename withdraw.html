@@ -20,7 +20,7 @@
 
         body {
             font-family: 'Hind Siliguri', sans-serif;
-            background-color: #050811;
+            background-color: #050505;
             color: #f8fafc;
             -webkit-tap-highlight-color: transparent;
         }
@@ -30,7 +30,7 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #1e293b;
+            background: #202020;
             border-radius: 10px;
         }
 
@@ -100,7 +100,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            border-left: 4px solid #3b82f6;
+            border-left: 4px solid #dc2626;
             animation: toastIn .25s ease, toastOut .25s ease 2.75s forwards;
         }
 
@@ -212,62 +212,13 @@
             }
         }
     </style>
-
-<style id="tahmid-jod-red-black-theme">
-/* TAHMID JOD red/black theme — visual-only overrides */
-:root { color-scheme: dark; }
-body { background-color:#050505 !important; color:#f8fafc; }
-.glass-card {
-  background:rgba(15,15,15,.88) !important;
-  border-color:rgba(127,29,29,.65) !important;
-  box-shadow:0 12px 30px rgba(0,0,0,.35), 0 0 0 1px rgba(220,38,38,.04);
-}
-header {
-  background:rgba(5,5,5,.94) !important;
-  border-bottom-color:rgba(127,29,29,.65) !important;
-}
-.toast { background:rgba(12,12,12,.97) !important; border-left-color:#dc2626 !important; }
-.toast.success, .toast.error, .toast.warning { border-left-color:#dc2626 !important; }
-.text-blue-300,.text-blue-400,.text-blue-500 { color:#f87171 !important; }
-.bg-blue-600,.bg-emerald-600,.bg-emerald-500 { background-color:#dc2626 !important; color:#fff !important; }
-.hover\:bg-blue-500:hover,.hover\:bg-emerald-500:hover { background-color:#b91c1c !important; }
-.bg-blue-500\/10,.bg-blue-600\/20,.bg-emerald-500\/10,.bg-emerald-500\/20,.bg-emerald-600\/20 {
-  background-color:rgba(220,38,38,.14) !important;
-}
-.text-emerald-300,.text-emerald-400,.text-emerald-500 { color:#f87171 !important; }
-.border-blue-500,.border-emerald-500 { border-color:#ef4444 !important; }
-.border-blue-500\/20,.border-emerald-500\/20 { border-color:rgba(239,68,68,.3) !important; }
-.shadow-blue-600\/25,.shadow-emerald-600\/25 { --tw-shadow-color:rgba(220,38,38,.25) !important; }
-.focus\:border-blue-500:focus,.focus\:border-emerald-500:focus,input:focus { border-color:#ef4444 !important; }
-.bg-red-600 { background-color:#b91c1c !important; }
-.hover\:bg-red-500:hover { background-color:#dc2626 !important; }
-.text-red-400 { color:#f87171 !important; }
-.bg-red-500\/10,.bg-red-500\/5 { background-color:rgba(220,38,38,.14) !important; }
-.border-red-500\/20,.border-red-500\/15,.border-red-500\/10 { border-color:rgba(239,68,68,.3) !important; }
-.bg-purple-500\/10,.bg-amber-500\/10,.bg-pink-500\/10 { background-color:rgba(220,38,38,.14) !important; }
-.text-purple-400,.text-amber-400 { color:#f87171 !important; }
-.border-amber-500\/20,.border-amber-500\/10 { border-color:rgba(239,68,68,.3) !important; }
-.bg-slate-800,.bg-slate-900,.bg-\[\#0b1220\],.bg-\[\#0d1322\],.bg-\[\#0b0f1a\] {
-  background-color:#0b0b0b !important;
-}
-.bg-slate-800\/80,.hover\:bg-slate-800:hover,.hover\:bg-slate-700:hover {
-  background-color:rgba(38,38,38,.9) !important;
-}
-.border-slate-700,.border-slate-800,.border-slate-900 { border-color:rgba(82,20,20,.75) !important; }
-.text-slate-600 { color:#737373 !important; }
-.amount-chip:active { transform:scale(.95); }
-button:disabled { opacity:.65; }
-#channel-bkash.border-emerald-500,#channel-nagad.border-emerald-500 { border-color:#ef4444 !important; }
-#check-bkash,#check-nagad { background-color:#dc2626 !important; }
-</style>
-
 </head>
 
 <body class="min-h-screen flex flex-col pb-10">
 
 <div id="toast-container"></div>
 
-<header class="px-4 py-4 flex items-center justify-between border-b border-slate-900 bg-[#0b0f1a]/80 backdrop-blur-md sticky top-0 z-30">
+<header class="px-4 py-4 flex items-center justify-between border-b border-slate-900 bg-[#101010]/80 backdrop-blur-md sticky top-0 z-30">
     <div class="flex items-center space-x-3">
 
         <button
@@ -306,9 +257,9 @@ button:disabled { opacity:.65; }
 
             </div>
 
-            <div class="w-12 h-12 bg-pink-600/10 rounded-xl flex items-center justify-center mb-2">
+            <div class="w-12 h-12 bg-red-600/10 rounded-xl flex items-center justify-center mb-2">
 
-                <span class="text-pink-500 font-black text-lg tracking-tighter">
+                <span class="text-red-500 font-black text-lg tracking-tighter">
                     bKash
                 </span>
 
@@ -363,7 +314,7 @@ button:disabled { opacity:.65; }
                     autocomplete="tel"
                     maxlength="13"
                     placeholder="Enter your Wallet Number"
-                    class="w-full bg-[#0d1322] border border-slate-800 rounded-2xl px-4 py-3.5 pr-11 text-white text-xs focus:outline-none focus:border-emerald-500 transition shadow-inner">
+                    class="w-full bg-[#101010] border border-slate-800 rounded-2xl px-4 py-3.5 pr-11 text-white text-xs focus:outline-none focus:border-emerald-500 transition shadow-inner">
 
                 <div
                     id="wallet-valid-icon"
@@ -387,7 +338,7 @@ button:disabled { opacity:.65; }
 
         <div id="saved-number-box" class="hidden">
 
-            <div class="flex items-center justify-between bg-[#0d1322] border border-slate-800 rounded-xl px-3 py-2.5">
+            <div class="flex items-center justify-between bg-[#101010] border border-slate-800 rounded-xl px-3 py-2.5">
 
                 <div class="flex items-center gap-2 min-w-0">
 
@@ -429,7 +380,7 @@ button:disabled { opacity:.65; }
                     min="50"
                     max="100000"
                     placeholder="Amount"
-                    class="w-full bg-[#0d1322] border border-slate-800 rounded-2xl pl-9 pr-16 py-3.5 text-white text-xs focus:outline-none focus:border-emerald-500 transition shadow-inner">
+                    class="w-full bg-[#101010] border border-slate-800 rounded-2xl pl-9 pr-16 py-3.5 text-white text-xs focus:outline-none focus:border-emerald-500 transition shadow-inner">
 
                 <button
                     id="max-btn"
@@ -463,27 +414,27 @@ button:disabled { opacity:.65; }
             <div class="grid grid-cols-5 gap-2">
 
                 <button onclick="setQuickAmount(50)"
-                    class="amount-chip bg-[#0d1322] border border-slate-800 rounded-xl py-2.5 text-[10px] font-bold text-slate-300">
+                    class="amount-chip bg-[#101010] border border-slate-800 rounded-xl py-2.5 text-[10px] font-bold text-slate-300">
                     ৳50
                 </button>
 
                 <button onclick="setQuickAmount(100)"
-                    class="amount-chip bg-[#0d1322] border border-slate-800 rounded-xl py-2.5 text-[10px] font-bold text-slate-300">
+                    class="amount-chip bg-[#101010] border border-slate-800 rounded-xl py-2.5 text-[10px] font-bold text-slate-300">
                     ৳100
                 </button>
 
                 <button onclick="setQuickAmount(500)"
-                    class="amount-chip bg-[#0d1322] border border-slate-800 rounded-xl py-2.5 text-[10px] font-bold text-slate-300">
+                    class="amount-chip bg-[#101010] border border-slate-800 rounded-xl py-2.5 text-[10px] font-bold text-slate-300">
                     ৳500
                 </button>
 
                 <button onclick="setQuickAmount(1000)"
-                    class="amount-chip bg-[#0d1322] border border-slate-800 rounded-xl py-2.5 text-[10px] font-bold text-slate-300">
+                    class="amount-chip bg-[#101010] border border-slate-800 rounded-xl py-2.5 text-[10px] font-bold text-slate-300">
                     ৳1000
                 </button>
 
                 <button onclick="setQuickAmount(5000)"
-                    class="amount-chip bg-[#0d1322] border border-slate-800 rounded-xl py-2.5 text-[10px] font-bold text-slate-300">
+                    class="amount-chip bg-[#101010] border border-slate-800 rounded-xl py-2.5 text-[10px] font-bold text-slate-300">
                     ৳5000
                 </button>
 
@@ -2063,7 +2014,7 @@ function renderHistoryItem(item) {
                         <div class="w-9 h-9 rounded-xl ${
                             method === "NAGAD"
                                 ? "bg-orange-500/10 text-orange-400"
-                                : "bg-pink-500/10 text-pink-400"
+                                : "bg-red-500/10 text-red-400"
                         } flex items-center justify-center">
 
                             <i class="fa-solid fa-wallet text-xs"></i>

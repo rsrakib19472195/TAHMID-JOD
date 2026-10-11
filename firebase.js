@@ -1,6 +1,6 @@
 // firebase.js
 // ============================================================
-// AURA ARMAN TOUR - FIREBASE + MEDIAN ONESIGNAL
+// TAHMID JOD - FIREBASE + MEDIAN ONESIGNAL
 // ============================================================
 
 import {
@@ -56,7 +56,7 @@ export const db =
 ========================================================= */
 
 export const DEFAULT_PROFILE_PHOTO =
-    "https://videotourl.com/images/1789800604014-b96e1edf-d789-4513-8557-9fb63a327a13.jpg";
+    "https://videotourl.com/images/1791731746074-18b920d8-818a-422d-98b7-941333ef35c9.jpg";
 
 
 export const ADMIN_EMAIL =

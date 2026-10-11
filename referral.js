@@ -1,4 +1,4 @@
-// Shared referral reward logic for AURA SKILL.
+// Shared referral reward logic for TAHMID JOD.
 // Reward: ৳10 to the referrer after the referred account has a positive balance (deposit).
 import { db } from './firebase.js';
 import {
