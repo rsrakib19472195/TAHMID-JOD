@@ -586,6 +586,7 @@ section{
 
 .projects-section{
     position:relative;
+    scroll-margin-top:88px;
 }
 
 .projects-grid{
@@ -1780,6 +1781,68 @@ footer{
 
             </article>
 
+
+            <article class="project-card reveal">
+
+                <div class="project-preview">
+
+                    <img
+                    class="project-logo"
+                    src="https://videotourl.com/images/1791731746074-18b920d8-818a-422d-98b7-941333ef35c9.jpg"
+                    alt="TAHMID JOD Logo"
+                    loading="lazy">
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-top">
+
+                        <h3>TAHMID JOD</h3>
+
+                        <span class="project-status">
+                            <i class="fas fa-circle"></i>
+                            <span data-bn="লাইভ" data-en="LIVE">লাইভ</span>
+                        </span>
+
+                    </div>
+
+                    <p
+                    class="project-description"
+                    data-bn="TAHMID JOD একটি আধুনিক ওয়েব প্রজেক্ট। সুন্দর ডিজাইন, ব্যবহারবান্ধব ইন্টারফেস এবং স্মুথ অভিজ্ঞতার জন্য তৈরি।"
+                    data-en="TAHMID JOD is a modern web project built with a clean design, user-friendly interface and smooth experience.">
+                        TAHMID JOD একটি আধুনিক ওয়েব প্রজেক্ট। সুন্দর ডিজাইন,
+                        ব্যবহারবান্ধব ইন্টারফেস এবং স্মুথ অভিজ্ঞতার জন্য তৈরি।
+                    </p>
+
+                    <div class="project-meta">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Firebase</span>
+                        <span class="project-tag">Responsive</span>
+                    </div>
+
+                    <a
+                    href="https://tahmidjod.netlify.app/"
+                    class="project-btn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                        <span
+                        data-bn="লাইভ প্রজেক্ট দেখুন"
+                        data-en="View Live Project">
+                            লাইভ প্রজেক্ট দেখুন
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
         </div>
 
     </div>
@@ -2880,6 +2943,50 @@ window.addEventListener(
         passive:true
     }
 );
+
+
+/* =========================
+   MY PROJECTS BUTTON SCROLL
+========================= */
+
+// Always take the user directly to the Projects section,
+// accounting for the fixed navbar so the section heading stays visible.
+document
+.querySelectorAll('a[href="#projects"]')
+.forEach(link => {
+
+    link.addEventListener("click", event => {
+
+        const projectsSection =
+            document.getElementById("projects");
+
+        if (!projectsSection) return;
+
+        event.preventDefault();
+
+        const navbar =
+            document.querySelector(".navbar");
+
+        const navbarHeight = navbar
+            ? navbar.getBoundingClientRect().height
+            : 0;
+
+        const targetTop =
+            projectsSection.getBoundingClientRect().top +
+            window.pageYOffset - navbarHeight - 12;
+
+        if (window.location.hash !== "#projects") {
+            history.replaceState(null, "", "#projects");
+        }
+
+        window.scrollTo({
+            top: Math.max(0, targetTop),
+            behavior: "smooth"
+        });
+
+    });
+
+});
 
 
 /* =========================
